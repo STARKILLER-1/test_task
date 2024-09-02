@@ -1,0 +1,59 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+#app {
+  position: relative;
+}
+
+.window {
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  background-color: #f0f0f0; /*Текст окна*/
+  border: 1px solid #ccc; /*Грань окна*/
+  box-shadow: 2px 2px 12px rgba(112, 75, 75, 0.2); /*Подсветка окна*/
+  overflow: hidden;
+}
+
+.window-header {
+  background-color: #333; /*заголовка цвет*/
+  color: #fff; /*Цвет текста заголовка*/
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.window-content {
+  padding: 10px;
+  height: calc(100% - 30px);
+  overflow-y: auto;
+}
+
+.window-minimized {
+  height: 30px;
+}
+
+.window-button-close {
+  background: none;
+  border: none;
+  color: rgb(231, 8, 8);
+  cursor: pointer;
+}
+.window-button-toggle {
+  background: none;
+  border: none;
+  color: rgb(216, 231, 8);
+  cursor: pointer;
+}
+.window-resizer {
+  width: 10px;
+  height: 10px;
+  background-color: #333;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: se-resize;
+}
